@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>¿Cómo instalar aplicaciones móviles?</h2>
+
+<div id="paso1">
+  <p><strong>Paso 1:</strong> Abre la tienda de aplicaciones</p>
+  <p>📱 Busca el icono de <strong>Play Store</strong> o <strong>App Store</strong></p>
+  <button onclick="siguiente(2)">Siguiente</button>
+</div>
+
+<div id="paso2" style="display:none;">
+  <p><strong>Paso 2:</strong> Busca la aplicación</p>
+  <p>🔍 Escribe el nombre en la barra de búsqueda</p>
+  <button onclick="siguiente(3)">Siguiente</button>
+</div>
+
+<div id="paso3" style="display:none;">
+  <p><strong>Paso 3:</strong> Instalar</p>
+  <p>⬇️ Presiona el botón <strong>Instalar</strong></p>
+  <button onclick="siguiente(4)">Siguiente</button>
+</div>
+
+<div id="paso4" style="display:none;">
+  <p><strong>Paso 4:</strong> Abrir la app</p>
+  <p>✅ Presiona <strong>Abrir</strong> o búscala en el celular</p>
+  <button onclick="reiniciar()">Volver a empezar</button>
+</div>
+
+<script>
+function siguiente(num) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById("paso" + i).style.display = "none";
+  }
+  document.getElementById("paso" + num).style.display = "block";
+}
+
+function reiniciar() {
+  siguiente(1);
+}
+</script>
+<style>
+    p {
+      font-size: 22px;
+    }
+    
+    button {
+      font-size: 20px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+    </style>
+    <button onclick="salir()">Salir</button>
+    <script>
+        function salir() {
+          let confirmar = confirm("¿Seguro que deseas salir?");
+        
+          if (confirmar) {
+            alert("Gracias por usar la guía 😊");
+            window.location.href = "pagina.html"; // o la página principal que tú tengas
+          }
+        }
+        </script>
+        <style>
+            button {
+              font-size: 20px;
+              padding: 12px 20px;
+              background-color: #d9534f;
+              color: white;
+              border: none;
+              border-radius: 8px;
+            }
+            
+            button:hover {
+              background-color: #c9302c;
+            }
+            </style>
+</body>
+</html>

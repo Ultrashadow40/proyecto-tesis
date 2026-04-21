@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Programas del Computador</h2>
+
+<button onclick="mostrarPrograma('word')">📝 Word</button>
+<button onclick="mostrarPrograma('navegador')">🌐 Navegador</button>
+<button onclick="mostrarPrograma('explorador')">📁 Archivos</button>
+<button onclick="mostrarPrograma('reproductor')">🎵 Música / Videos</button>
+<div id="word" style="display:none;">
+    <h3>Microsoft Word</h3>
+    <p>Sirve para escribir documentos</p>
+    <ol>
+      <li>Abrir Word</li>
+      <li>Presionar “Nuevo documento”</li>
+      <li>Escribir con el teclado</li>
+      <li>Guardar el archivo</li>
+    </ol>
+  </div>
+  
+  <div id="navegador" style="display:none;">
+    <h3>Navegador (Chrome, Edge)</h3>
+    <p>Sirve para usar internet</p>
+    <ol>
+      <li>Abrir el navegador</li>
+      <li>Escribir lo que buscas</li>
+      <li>Presionar Enter</li>
+      <li>Hacer clic en un resultado</li>
+    </ol>
+  </div>
+  
+  <div id="explorador" style="display:none;">
+    <h3>Explorador de archivos</h3>
+    <p>Sirve para ver tus archivos</p>
+    <ol>
+      <li>Abrir “Este equipo” o “Archivos”</li>
+      <li>Buscar carpetas</li>
+      <li>Hacer doble clic para abrir</li>
+    </ol>
+  </div>
+  
+  <div id="reproductor" style="display:none;">
+    <h3>Reproductor de música o video</h3>
+    <p>Sirve para escuchar música o ver videos</p>
+    <ol>
+      <li>Abrir el programa</li>
+      <li>Seleccionar archivo</li>
+      <li>Presionar reproducir ▶️</li>
+    </ol>
+  </div>
+  <script>
+    function mostrarPrograma(prog) {
+      let programas = ['word', 'navegador', 'explorador', 'reproductor'];
+    
+      for (let i = 0; i < programas.length; i++) {
+        document.getElementById(programas[i]).style.display = "none";
+      }
+    
+      document.getElementById(prog).style.display = "block";
+    }
+    </script>
+    <button onclick="salir()" style="position:absolute; top:10px; right:10px;">
+        🚪 Salir
+      </button>
+      <script>
+        function salir() {
+          if (confirm("¿Seguro que deseas salir?")) {
+            window.location.href = "pagina.html";
+          }
+        }
+        </script>
+</body>
+</html>

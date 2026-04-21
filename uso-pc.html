@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Uso del Computador</h2>
+
+<button onclick="mostrarPC('encender')">💻 Encender el PC</button>
+<button onclick="mostrarPC('mouse')">🖱️ Usar el mouse</button>
+<button onclick="mostrarPC('teclado')">⌨️ Usar el teclado</button>
+<button onclick="mostrarPC('internet')">🌐 Navegar en internet</button>
+
+<div id="encender" style="display:none;">
+    <h3>Encender el computador</h3>
+    <ol>
+      <li>Presiona el botón de encendido.</li>
+      <li>Espera a que cargue.</li>
+      <li>Ingresa tu contraseña si la pide.</li>
+    </ol>
+  </div>
+  
+  <div id="mouse" style="display:none;">
+    <h3>Usar el mouse</h3>
+    <ol>
+      <li>Mueve el mouse para mover la flecha.</li>
+      <li>Haz clic izquierdo para seleccionar.</li>
+      <li>Haz doble clic para abrir.</li>
+    </ol>
+  </div>
+  
+  <div id="teclado" style="display:none;">
+    <h3>Usar el teclado</h3>
+    <ol>
+      <li>Usa las letras para escribir.</li>
+      <li>Enter sirve para aceptar.</li>
+      <li>Espacio separa palabras.</li>
+    </ol>
+  </div>
+  
+  <div id="internet" style="display:none;">
+    <h3>Navegar en internet</h3>
+    <ol>
+      <li>Abre un navegador (Chrome, Edge).</li>
+      <li>Escribe lo que buscas.</li>
+      <li>Haz clic en un resultado.</li>
+    </ol>
+  </div>
+  <script>
+    function mostrarPC(opcion) {
+      let secciones = ['encender', 'mouse', 'teclado', 'internet'];
+    
+      for (let i = 0; i < secciones.length; i++) {
+        document.getElementById(secciones[i]).style.display = "none";
+      }
+    
+      document.getElementById(opcion).style.display = "block";
+    }
+    </script>
+    <style>
+        button {
+          font-size: 20px;
+          padding: 15px;
+          margin: 10px;
+          border-radius: 10px;
+        }
+        
+        p, li {
+          font-size: 20px;
+        }
+        </style>
+        <button onclick="salir()" style="position:absolute; top:10px; right:10px;">
+            🚪 Salir
+          </button>
+        <script>
+            function salir() {
+              let confirmar = confirm("¿Seguro que deseas salir?");
+            
+              if (confirmar) {
+                window.location.href = "pagina.html"; // cambia si tu inicio tiene otro nombre
+              }
+            }
+            </script>
+</body>
+</html>
