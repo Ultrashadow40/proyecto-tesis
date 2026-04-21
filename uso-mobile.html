@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+      font-size: 20px;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+      background-color: #2c7be5;
+      color: white;
+    }
+    
+    button:hover {
+      background-color: #1a5bb8;
+    }
+    
+    div {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    
+    p, li {
+      font-size: 20px;
+    }
+    </style>
+    <style>
+        button {
+          font-size: 20px;
+          padding: 12px 20px;
+          background-color: #d9534f;
+          color: white;
+          border: none;
+          border-radius: 8px;
+        }
+        
+        button:hover {
+          background-color: #c9302c;
+        }
+        </style>
+<body>
+    <h2>¿Cómo usar aplicaciones móviles?</h2>
+    <h2>Selecciona una aplicación</h2>
+
+<button onclick="mostrarApp('whatsapp')">📱 WhatsApp</button>
+<button onclick="mostrarApp('youtube')">▶️ YouTube</button>
+<button onclick="mostrarApp('facebook')">📘 Facebook</button>
+<button onclick="mostrarApp('camara')">📷 Cámara</button>
+<div id="whatsapp" style="display:none;">
+    <h3>WhatsApp</h3>
+    <p>Enviar mensajes y hacer llamadas</p>
+    <ol>
+      <li>Abrir WhatsApp</li>
+      <li>Elegir un contacto</li>
+      <li>Escribir mensaje</li>
+      <li>Presionar enviar</li>
+    </ol>
+  </div>
+  
+  <div id="youtube" style="display:none;">
+    <h3>YouTube</h3>
+    <p>Ver videos</p>
+    <ol>
+      <li>Abrir YouTube</li>
+      <li>Buscar video</li>
+      <li>Presionar para reproducir</li>
+    </ol>
+  </div>
+  
+  <div id="facebook" style="display:none;">
+    <h3>Facebook</h3>
+    <p>Ver publicaciones</p>
+    <ol>
+      <li>Abrir Facebook</li>
+      <li>Deslizar pantalla</li>
+      <li>Dar “Me gusta”</li>
+    </ol>
+  </div>
+  
+  <div id="camara" style="display:none;">
+    <h3>Cámara</h3>
+    <p>Tomar fotos</p>
+    <ol>
+      <li>Abrir cámara</li>
+      <li>Apuntar</li>
+      <li>Presionar botón</li>
+    </ol>
+  </div>
+  <script>
+    function mostrarApp(app) {
+      let apps = ['whatsapp', 'youtube', 'facebook', 'camara'];
+    
+      for (let i = 0; i < apps.length; i++) {
+        document.getElementById(apps[i]).style.display = "none";
+      }
+    
+      document.getElementById(app).style.display = "block";
+    }
+    </script>
+ 
+
+        <p>Estas son algunas aplicaciones comunes y cómo usarlas:</p>
+        <button onclick="salir()" style="position:absolute; top:10px; right:10px;">🚪 Salir</button>
+        <script>
+            function salir() {
+              let confirmar = confirm("¿Seguro que deseas salir?");
+            
+              if (confirmar) {
+                window.location.href = "pagina.html"; // cambia esto por tu página principal
+              }
+            }
+            </script>
+        
+</body>
+</html>

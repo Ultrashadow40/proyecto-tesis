@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página de Bienvenida</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #333;
+  text-align: center;
+}
+header {
+  background-color: #2c7be5;
+  color: white;
+  padding: 40px 20px;
+}
+h1 {
+  font-size: 36px;
+}
+p {
+  font-size: 20px;
+}
+.container {
+  margin-top: 40px;
+}
+button {
+  background-color: #2c7be5;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1a5bb8;
+}
+.section {
+  margin-top: 50px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  font-size: 20px;
+  margin: 10px 0;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Bienvenido</h1>
+  <p>Esta es una página diseñada para ayudarte paso a paso en lo que nesecites saber en tecnologia</p>
+</header>
+
+<div class="container">
+  <p>Haz clic en el botón para ver los temas disponibles</p>
+  <button onclick="mostrarTemas()">Ver temas</button>
+</div>
+
+<div class="section" id="temas" style="display:none;">
+  <h2>Temas disponibles</h2>
+  <ul>
+    <li><a href="apps-mobiles.html"> instalar apps </a></li>
+    <li><a href="uso-mobile.html"> usar las apps </a></li>
+    <li><a href="uso-pc.html">como usar una computadora</a></li>
+    <li><a href="apps-pc.html">como instalar apps de computadora</a></li>
+  </ul>
+</div>
+
+<script>
+function mostrarTemas() {
+  document.getElementById("temas").style.display = "block";
+}
+</script>
+
+</body>
+</html>
