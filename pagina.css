@@ -1,0 +1,97 @@
+/* Fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 30px;
+    font-size: 30px;
+  }
+  
+  /* Contenedor centrado */
+  .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Tarjetas */
+  .card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Texto */
+  h2 {
+    font-size: 26px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  /* Botones */
+  button {
+    font-size: 22px;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a90e2;
+    color: white;
+    width: 90%;
+    max-width: 300px;
+    cursor: pointer;
+  }
+  
+  /* Hover suave */
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  /* Botón salir */
+  .salir {
+    background-color: #e74c3c;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    padding: 10px 15px;
+  }
+  
+  .salir:hover {
+    background-color: #c0392b;
+  }
+  /* Para enlaces que usas como botones */
+a {
+    text-decoration: none;   /* quita subrayado */
+    color: inherit;          /* usa el color normal */
+  }
+  
+  /* Diseño de botón */
+  a.boton {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 90%;
+    max-width: 300px;
+  }
+  
+  /* Efecto al pasar el mouse */
+  a.boton:hover {
+    background-color: #357abd;
+  }
